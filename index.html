@@ -51,8 +51,20 @@
         }
     </script>
     <style>
-        * { font-family: 'Inter', sans-serif; }
-        html { scroll-behavior: smooth; }
+        * {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
 
         /* Custom scrollbar */
         ::-webkit-scrollbar { width: 6px; }
@@ -645,16 +657,17 @@
 
     <!-- ========== FIXED MOBILE CALL BUTTON ========== -->
     <div class="fixed bottom-0 left-0 right-0 z-50 sm:hidden bg-navy-950/95 backdrop-blur-lg border-t border-white/[0.06] px-4 py-3">
-        <div class="flex gap-3">
-            <a href="tel:8763967012" class="flex-1 btn-primary inline-flex items-center justify-center gap-2 bg-yellow-500 text-navy-950 font-bold text-sm py-3.5 rounded-xl glow-yellow">
-                <span class="iconify text-lg" data-icon="lucide:phone-call"></span>
-                Call Now
-            </a>
-            <a href="https://wa.me/18763967012?text=Hi%20Hudson%27s%20Welding%2C%20I%27d%20like%20a%20free%20estimate." target="_blank" rel="noopener" class="flex-1 btn-secondary inline-flex items-center justify-center gap-2 bg-green-600/20 border border-green-500/30 text-green-400 font-semibold text-sm py-3.5 rounded-xl">
-                <span class="iconify text-lg" data-icon="mdi:whatsapp"></span>
-                WhatsApp
-            </a>
-        </div>
+       <div class="mobile-action-bar grid grid-cols-2 gap-3 w-full">
+    <a href="tel:8763967012" class="min-w-0 btn-primary inline-flex items-center justify-center gap-2 bg-yellow-500 text-navy-950 font-bold text-sm px-3 py-3.5 rounded-xl glow-yellow whitespace-nowrap">
+        <span class="iconify flex-shrink-0 text-lg" data-icon="lucide:phone-call"></span>
+        Call Now
+    </a>
+
+    <a href="https://wa.me/18763967012?text=Hi%20Hudson%27s%20Welding%2C%20I%27d%20like%20a%20free%20estimate." target="_blank" rel="noopener" class="min-w-0 btn-secondary inline-flex items-center justify-center gap-2 bg-green-600/20 border border-green-500/30 text-green-400 font-semibold text-sm px-3 py-3.5 rounded-xl whitespace-nowrap">
+        <span class="iconify flex-shrink-0 text-lg" data-icon="mdi:whatsapp"></span>
+        WhatsApp
+    </a>
+</div>
     </div>
 
     <!-- ========== JAVASCRIPT ========== -->
